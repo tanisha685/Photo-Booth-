@@ -1,0 +1,180 @@
+/* styles/App.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #ffdde1, #fbd3e9);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 2rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 2rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: #e11d48;
+  margin-bottom: 1.5rem;
+}
+
+.webcam-container {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 4px solid #fbcfe8;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+
+.webcam-view {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+/* Filter Buttons */
+.filter-selector {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  background: #f3f4f6;
+  color: #111827;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #e11d48;
+  color: white;
+}
+
+/* Main Buttons */
+.capture-btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #e11d48;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 1rem;
+}
+
+.capture-btn:hover {
+  background-color: #be123c;
+}
+
+.strip-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.download-btn,
+.reshoot-btn {
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
+.download-btn {
+  background-color: #10b981;
+  color: white;
+}
+
+.reshoot-btn {
+  background-color: #fbbf24;
+  color: #111;
+}
+
+/* Strip View */
+.strip-container {
+  background: #fafafa;
+  border-radius: 1.5rem;
+  padding: 1rem 1rem 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.photo-strip {
+  border-radius: 1rem;
+  max-width: 300px;
+  width: 100%;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.date-label {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* Overlays */
+.countdown-overlay,
+.message-overlay {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  z-index: 10;
+}
+
+.message-overlay {
+  font-size: 1.8rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #111;
+  border: 2px solid #e11d48;
+}
+
+/* Filters (for webcam preview) */
+.noir {
+  filter: grayscale(1) contrast(1.2);
+}
+.fisheye {
+  filter: contrast(1.5) saturate(1.8);
+}
+.rainbow {
+  filter: hue-rotate(140deg) saturate(1.5);
+}
+.glitch {
+  filter: contrast(2) hue-rotate(90deg);
+}
+.crosshatch {
+  filter: grayscale(1) brightness(1.5);
+}
